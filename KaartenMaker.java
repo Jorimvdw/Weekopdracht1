@@ -7,6 +7,9 @@ public class KaartenMaker {
 	String[] Waarde = {"2","3","4","5","6","7","8","9","10","B","V","H","A"}; 
 	int[] Rekenwaarde = {2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11};
 	ArrayList<Kaart> heledek = new ArrayList<Kaart>();
+	ArrayList<Kaart> getrokkenkaarten = new ArrayList<>();
+	int totaalwaarde = 0;
+	
 		
 		void Vuldek () {
 			
@@ -28,10 +31,13 @@ public class KaartenMaker {
 		void Kaarttrekken (int a) {
 			for (int b=0; b<a; b++) {
 			System.out.println(heledek.get(0));
-			System.out.println(heledek.get(0).rekenwaarde);
-			heledek.remove(0);
+			totaalwaarde += heledek.get(0).rekenwaarde;
+			getrokkenkaarten.add(heledek.get(0));
+			heledek.remove(0);			
 			}
 		}
+		
+		
 		
 		
 }		
